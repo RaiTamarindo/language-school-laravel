@@ -28,12 +28,12 @@ npm install
 
 ## Executando a aplicação
 
-1. Execute o comando:
+* Execute o comando:
 ```
 php artisan serve
 ```
 
-2. Abra http://localhost:8000 em um navegador.
+* Abra http://localhost:8000 em um navegador.
 
 ## `TODO`
 
