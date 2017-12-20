@@ -37,7 +37,7 @@ php artisan serve
 
 ## `TODO`
 
-[x] Modelagem de dados
-[ ] ORM e CRUD
-[ ] Serviços REST
-[ ] Aplicação front-end
+- [x] Modelagem de dados
+- [ ] ORM e CRUD
+- [ ] Serviços REST
+- [ ] Aplicação front-end
