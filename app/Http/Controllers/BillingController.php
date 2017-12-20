@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Billing;
 
 class BillingController extends Controller
 {
@@ -13,7 +14,7 @@ class BillingController extends Controller
      */
     public function index()
     {
-        return "Peida!";
+        return Billing::all();
     }
 
     /**
@@ -24,7 +25,14 @@ class BillingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $billing = new Billing;
+
+        $billing->amount = $request->amount;
+        $billing->due_date = $request->due_date;
+
+        $billing->save();
+        
+        return $billing;
     }
 
     /**
@@ -35,7 +43,7 @@ class BillingController extends Controller
      */
     public function show($id)
     {
-        //
+        return Billing::find($id);
     }
 
     /**
@@ -47,7 +55,14 @@ class BillingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $billing = Billing::find($id);
+
+        $billing->amount = $request->amount;
+        $billing->due_date = $request->due_date;
+
+        $billing->save();
+
+        return $billing;
     }
 
     /**
@@ -58,6 +73,8 @@ class BillingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Billing::destroy($id);
+
+        return 204;
     }
 }
