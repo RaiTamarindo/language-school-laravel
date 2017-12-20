@@ -66,7 +66,6 @@ class StudentController extends Controller
         $student->email = $request->email;
         $student->phone = $request->phone;
         $student->city = $request->city;
-        $student->is_active = $request->is_active;
 
         $student->save();
 
