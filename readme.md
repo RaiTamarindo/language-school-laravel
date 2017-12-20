@@ -33,7 +33,7 @@ npm install
 php artisan serve
 ```
 
-1. Abra http://localhost:8000 em um navegador.
+2. Abra http://localhost:8000 em um navegador.
 
 ## `TODO`
 
